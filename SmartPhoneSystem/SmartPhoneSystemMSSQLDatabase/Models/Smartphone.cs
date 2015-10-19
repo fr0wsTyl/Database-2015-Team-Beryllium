@@ -9,7 +9,11 @@ namespace SmartphoneSystemMSSQLDatabase.Models
 {
     public class Smartphone
     {
-        public int SmartphoneId { get; set; }
+        public Smartphone()
+        {
+            this.SmartphoneId = Guid.NewGuid();
+        }
+        public Guid SmartphoneId { get; set; }
 
         public string Name { get; set; }
 
@@ -17,7 +21,7 @@ namespace SmartphoneSystemMSSQLDatabase.Models
 
         //public double? Camera { get; set; }
 
-        public int? VendorId { get; set; }
+        public Guid? VendorId { get; set; }
 
         public virtual Vendor vendor { get; set; }
 

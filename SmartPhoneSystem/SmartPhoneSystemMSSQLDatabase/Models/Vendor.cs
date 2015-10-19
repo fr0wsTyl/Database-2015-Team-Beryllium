@@ -12,10 +12,11 @@ namespace SmartphoneSystemMSSQLDatabase.Models
 
         public Vendor()
         {
+            this.VendorId = Guid.NewGuid();
             this.smartphones = new HashSet<Smartphone>();
         }
 
-        public int VendorId { get; set; }
+        public Guid VendorId { get; set; }
 
         public string Country { get; set; }
 

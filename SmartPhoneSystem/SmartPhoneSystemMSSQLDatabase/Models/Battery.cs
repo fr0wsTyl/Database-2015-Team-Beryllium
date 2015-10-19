@@ -8,7 +8,12 @@ namespace SmartphoneSystemMSSQLDatabase.Models
 {
     public class Battery
     {
-        public int BatteryId { get; set; }
+        public Battery()
+        {
+            this.BatteryId = Guid.NewGuid();
+        }
+
+        public Guid BatteryId { get; set; }
 
         public double? Capacity { get; set; }
 
@@ -16,7 +21,7 @@ namespace SmartphoneSystemMSSQLDatabase.Models
 
         public bool? Removable { get; set; }
 
-        public int SmartphoneId { get; set; }
+        public Guid SmartphoneId { get; set; }
 
         public virtual Smartphone Smartphone { get; set; }
     }
