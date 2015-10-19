@@ -1,11 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace SmartphoneSystemMSSQLDatabase.Models
+﻿namespace SmartphoneSystemMSSQLDatabase.Models
 {
+    using System;
+    using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
+    using System.Linq;
+    using System.Text;
+    using System.Threading.Tasks;
+
     public class Vendor
     {
         private ICollection<Smartphone> smartphones;
@@ -22,6 +23,7 @@ namespace SmartphoneSystemMSSQLDatabase.Models
 
         public DateTime FoundedOn { get; set; }
 
+        [MaxLength(20)]
         public string Name { get; set; }
 
         public virtual ICollection<Smartphone> Smartphones

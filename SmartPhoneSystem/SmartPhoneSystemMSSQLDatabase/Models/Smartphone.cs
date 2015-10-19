@@ -1,36 +1,28 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace SmartphoneSystemMSSQLDatabase.Models
+﻿namespace SmartphoneSystemMSSQLDatabase.Models
 {
+    using System;
+    using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
+    using System.Linq;
+    using System.Text;
+    using System.Threading.Tasks;
+
     public class Smartphone
     {
         public Smartphone()
         {
             this.SmartphoneId = Guid.NewGuid();
         }
+
         public Guid SmartphoneId { get; set; }
 
+        [MaxLength(20)]
         public string Name { get; set; }
-
-        //public double? Cpu { get; set; }
-
-        //public double? Camera { get; set; }
 
         public Guid? VendorId { get; set; }
 
-        public virtual Vendor vendor { get; set; }
+        public virtual Vendor Vendor { get; set; }
 
-        //public int? DisplayId { get; set; }
-
-        //public virtual Display Display { get; set; }
-
-        //public int? BatteryId { get; set; }
-
-        //public virtual Battery Battery { get; set; }
+        public virtual Display Display { get; set; }
     }
 }

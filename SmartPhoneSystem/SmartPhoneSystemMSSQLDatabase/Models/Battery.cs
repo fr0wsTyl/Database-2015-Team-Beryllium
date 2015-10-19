@@ -1,11 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace SmartphoneSystemMSSQLDatabase.Models
+﻿namespace SmartphoneSystemMSSQLDatabase.Models
 {
+    using System;
+    using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
+    using System.ComponentModel.DataAnnotations.Schema;
+    using System.Linq;
+    using System.Text;
+    using System.Threading.Tasks;
+
     public class Battery
     {
         public Battery()
@@ -21,6 +23,9 @@ namespace SmartphoneSystemMSSQLDatabase.Models
 
         public bool? Removable { get; set; }
 
+        [Required]
+        [Key]
+        [ForeignKey("Smartphone")]
         public Guid SmartphoneId { get; set; }
 
         public virtual Smartphone Smartphone { get; set; }
