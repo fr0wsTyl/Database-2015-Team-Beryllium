@@ -8,13 +8,13 @@ namespace SmartphoneSystemMSSQLDatabase.Models
 {
     public class Display
     {
-        public Guid DisplayId { get; set; }
+        public int DisplayId { get; set; }
 
         public string Type { get; set; }
 
-        public bool MultiTouch { get; set; }
+        public bool? MultiTouch { get; set; }
 
-        public Guid SmartphoneId { get; set; }
+        public int SmartphoneId { get; set; }
 
         public virtual Smartphone Smartphone { get; set; }
     }

@@ -15,6 +15,12 @@ namespace SmartphoneSystemMSSQLDatabase
         {
             Database.SetInitializer(new MigrateDatabaseToLatestVersion<SmartphoneSystemContext, Configuration>());
             var db = new SmartphoneSystemContext();
+            db.Smartphones.Add(new Smartphone
+            {
+                Name = "asdasd"
+                
+            });
+            db.SaveChanges();
         }
     }
 }

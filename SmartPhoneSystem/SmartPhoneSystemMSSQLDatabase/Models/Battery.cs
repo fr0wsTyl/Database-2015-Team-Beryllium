@@ -8,15 +8,15 @@ namespace SmartphoneSystemMSSQLDatabase.Models
 {
     public class Battery
     {
-        public Guid BatteryId { get; set; }
+        public int BatteryId { get; set; }
 
-        public double Capacity { get; set; }
+        public double? Capacity { get; set; }
 
-        public double TalkTime { get; set; }
+        public double? TalkTime { get; set; }
 
-        public bool Removable { get; set; }
+        public bool? Removable { get; set; }
 
-        public Guid SmartphoneId { get; set; }
+        public int SmartphoneId { get; set; }
 
         public virtual Smartphone Smartphone { get; set; }
     }

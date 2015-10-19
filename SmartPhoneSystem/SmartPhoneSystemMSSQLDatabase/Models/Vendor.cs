@@ -15,7 +15,7 @@ namespace SmartphoneSystemMSSQLDatabase.Models
             this.smartphones = new HashSet<Smartphone>();
         }
 
-        public Guid VendorId { get; set; }
+        public int VendorId { get; set; }
 
         public string Country { get; set; }
 
